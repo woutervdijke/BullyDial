@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bullying Dial Tool</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id="container">
+    <div id="tool">
+<h1>How do different factors affect bullying in <select name="local council">
+    <option value="leicester">Leicester</option>
+    <option value="camden">Camden</option>
+    <option value="buckinghamshire">Buckinghamshire</option>
+    <option value="manchester">Manchester</option>
+</select> ?</h1>
+
+        <p>Population density: <a class="redText">13.1k</a> / <a class="blueText">8.4k</a> per square mile</p>
+        <div class="dial" style="background-image:url('dial_density.png')" >
+            <div class="pointerRed" id="redPop"></div>
+            <div class="pointerBlue" id="bluePop"></div>
+        </div>
+
+        <p>Crime rate: <a class="redText">7.8</a> / <a class="blueText">9.3</a> crimes per 1000 inhabitants</p>
+        <div class="dial" style="background-image:url('dial_violence.png')">
+            <div class="pointerRed" id="redCrime"></div>
+            <div class="pointerBlue" id="blueCrime"></div>
+        </div>
+
+        <p>Average income: <a class="redText">£18.3k</a> / <a class="blueText">£21.3k</a> </p>
+        <div class="dial"style="background-image:url('dial_income.png')">
+            <div class="pointerRed" id="redIncome"></div>
+            <div class="pointerBlue" id="blueIncome"></div>
+        </div>
+
+        <p>Schools rated 'excellent': <a class="redText">12%</a> / <a class="blueText">17.2%</a> </p>
+        <div class="dial">
+            <div class="pointerRed" id="redSchools"></div>
+            <div class="pointerBlue" id="blueSchools"></div>
+        </div>
+
+        <p>Non-white population: <a class="redText">16.6%</a> / <a class="blueText">14.4%</a> </p>
+        <div class="dial">
+            <div class="pointerRed" id="redDiversity"></div>
+            <div class="pointerBlue" id="blueDiversity"></div>
+        </div>
+
+
+        <h1> The bullying percentage is: <a class="redText">54.3</a> / <a class="blueText"> 57.6</a> </h1>
+
+        <div class="selected" id="selectedRed"><p>Leicester<span class="hide"><a>X</a></span></p></div>
+        <div class="selected" id="selectedBlue"><p>Buckinghamshire<span class="hide"><a>X</a></span></p></div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
