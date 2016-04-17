@@ -1,61 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Bullying Dial Tool</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="underscore-min.js" type="text/javascript"></script>
+    <script src="BullyDial.js" type="text/javascript"></script>
 </head>
 <body>
 
 <div id="container">
     <div id="tool">
-<h1>How do different factors affect bullying in <select name="local council">
-    <option value="leicester">Leicester</option>
-    <option value="camden">Camden</option>
-    <option value="buckinghamshire">Buckinghamshire</option>
-    <option value="manchester">Manchester</option>
+<h1>How do different factors affect bullying in <select title="Local Authority" id="selectLA" onchange="setDials(this.value)">
+    <option value="none">Select a location</option>
+    <option value=0>Buckinghamshire</option>
+    <option value=1>Camden</option>
+    <option value=2>Leicester</option>
+    <option value=3>Manchester</option>
 </select> ?</h1>
 
-        <p>Population density: <a class="redText">13.1k</a> / <a class="blueText">8.4k</a> per square mile</p>
+
+        <p>Population density: <a class="redText" id="redDensityNum"></a> <a class="blueText" id="blueDensityNum"></a> per square mile</p>
         <div class="dial" style="background-image:url('dial_density.png')" >
-            <div class="pointerRed" id="redPop"></div>
-            <div class="pointerBlue" id="bluePop"></div>
+            <div class="pointerRed" id="redDensity"></div>
+            <div class="pointerBlue" id="blueDensity"></div>
         </div>
 
-        <p>Crime rate: <a class="redText">7.8</a> / <a class="blueText">9.3</a> crimes per 1000 inhabitants</p>
+        <p>Crime rate: <a class="redText" id="redViolenceNum"></a> <a class="blueText" id="blueViolenceNum"></a> violent crimes per 1000 inhabitants</p>
         <div class="dial" style="background-image:url('dial_violence.png')">
-            <div class="pointerRed" id="redCrime"></div>
-            <div class="pointerBlue" id="blueCrime"></div>
+            <div class="pointerRed" id="redViolence"></div>
+            <div class="pointerBlue" id="blueViolence"></div>
         </div>
 
-        <p>Average income: <a class="redText">£18.3k</a> / <a class="blueText">£21.3k</a> </p>
-        <div class="dial"style="background-image:url('dial_income.png')">
+        <p>Average income: <a class="redText" id="redIncomeNum"></a> <a class="blueText" id="blueIncomeNum"></a> </p>
+        <div class="dial" style="background-image:url('dial_income.png')">
             <div class="pointerRed" id="redIncome"></div>
             <div class="pointerBlue" id="blueIncome"></div>
         </div>
 
-        <p>Schools rated 'excellent': <a class="redText">12%</a> / <a class="blueText">17.2%</a> </p>
-        <div class="dial">
+        <p>Students in schools rated 'good' or 'excellent': <a class="redText" id="redSchoolsNum"></a> <a class="blueText" id="blueSchoolsNum"></a> </p>
+        <div class="dial" style="background-image:url('dial_schools.png')">
             <div class="pointerRed" id="redSchools"></div>
             <div class="pointerBlue" id="blueSchools"></div>
         </div>
 
-        <p>Non-white population: <a class="redText">16.6%</a> / <a class="blueText">14.4%</a> </p>
-        <div class="dial">
+        <p>Non-white population: <a class="redText" id="redDiversityNum"></a> <a class="blueText" id="blueDiversityNum"></a> </p>
+        <div class="dial" style="background-image:url('dial_diversity.png')">
             <div class="pointerRed" id="redDiversity"></div>
             <div class="pointerBlue" id="blueDiversity"></div>
         </div>
 
 
-        <h1> The bullying percentage is: <a class="redText">54.3</a> / <a class="blueText"> 57.6</a> </h1>
+        <h1> The bullying percentage is: <a class="redText" id="redResult"></a> <a class="blueText" id="blueResult"></a></h1>
 
-        <div class="selected" id="selectedRed"><p>Leicester<span class="hide"><a>X</a></span></p></div>
-        <div class="selected" id="selectedBlue"><p>Buckinghamshire<span class="hide"><a>X</a></span></p></div>
+        <div class="selected" id="selectedRed" onclick="removeSelection(selected1)"><p>Leicester<span class="hide"><a>X</a></span></p></div>
+        <div class="selected" id="selectedBlue" onclick="removeSelection(selected2)"><p>Buckinghamshire<span class="hide"><a>X</a></span></p></div>
 
         </div>
+    <div id="getData"><a href="BullyDial_data.xlsx">Get the data (.xlsx, 54KB)</a></div>
     </div>
-
-
 
 </body>
 </html>

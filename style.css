@@ -51,45 +51,58 @@ body {
     background-color: #0000ff;
     border: solid cornflowerblue 2px;
 }
-#redPop {
-    margin-left: 262px;
+
+.pointerGreen {
+    width: 1px;
+    height: 36px;
+    float: left;
+    background-color: #14d70d;
+    border: solid #a1eda5 2px;
+}
+ #redDensity {
+     display: none;
 }
 
-#bluePop {
-    margin-left: -202px;
+#blueDensity {
+    display: none;
 }
 
-#redCrime {
-    margin-left: 38px;
+#greenDensity {
+    display: none;
 }
 
-#blueCrime {
-    margin-left: 59px;
+#redViolence {
+    display: none;
+}
+
+#blueViolence {
+    display: none;
 }
 
 #redIncome {
-    margin-left: 481px;
+    display: none;
 }
 
 #blueIncome {
-    margin-left: 125px;
+    display: none;
 }
 
 #redSchools {
-    margin-left: 215px;
+    display: none;
 }
 
 #blueSchools {
-    margin-left: 215px;
+    display: none;
 }
 
 #redDiversity {
-    margin-left: 410px;
+    display: none;
 }
 
 #blueDiversity {
-    margin-left: -98px;
+    display: none;
 }
+
 
 .selected {
     margin-top: 20px;
@@ -129,16 +142,20 @@ body {
 
 #selectedRed {
     border-bottom: solid 6px #ff0000;
+    display: none;
 }
 
 
 
 #selectedBlue {
     border-bottom: solid 6px #0000ff;
+    display: none;
 }
 
-
-/* other elements */
+#getData {
+    float: right;
+    padding-right: 50px;
+}
 
 
 /* font styles */
@@ -152,6 +169,11 @@ h1 {
 p {
     font-family: "Helvetica Neue", Verdana, sans-serif;
     font-size: large;
+}
+
+#getData a:link{
+    font-family: "Helvetica Neue", Verdana, sans-serif;
+    color: #eb0011;
 }
 
 
