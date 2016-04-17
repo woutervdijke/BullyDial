@@ -89,6 +89,8 @@ function removeSelection(whichSelection) {
         document.getElementById("redViolenceNum").innerHTML = "";
         document.getElementById("redIncome").style.display = "none";
         document.getElementById("redIncomeNum").innerHTML = "";
+        document.getElementById("redSchools").style.display = "none";
+        document.getElementById("redSchoolsNum").innerHTML = "";
         document.getElementById("redDiversity").style.display = "none";
         document.getElementById("redDiversityNum").innerHTML = "";
         document.getElementById("redResult").innerHTML = "";
@@ -101,6 +103,8 @@ function removeSelection(whichSelection) {
         document.getElementById("blueViolenceNum").innerHTML = "";
         document.getElementById("blueIncome").style.display = "none";
         document.getElementById("blueIncomeNum").innerHTML = "";
+        document.getElementById("blueSchools").style.display = "none";
+        document.getElementById("blueSchoolsNum").innerHTML = "";
         document.getElementById("blueDiversity").style.display = "none";
         document.getElementById("blueDiversityNum").innerHTML = "";
         document.getElementById("blueResult").innerHTML = "";
