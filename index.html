@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Bullying Dial Tool</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="underscore-min.js" type="text/javascript"></script>
     <script src="BullyDial.js" type="text/javascript"></script>
 </head>
@@ -13,14 +14,16 @@
     <div id="tool">
 <h1>How do different factors affect bullying in <select title="Local Authority" id="selectLA" onchange="setDials(this.value)">
     <option value="none">Select a location</option>
-    <option value=0>Buckinghamshire</option>
-    <option value=1>Camden</option>
-    <option value=2>Leicester</option>
-    <option value=3>Manchester</option>
+    <script>
+        var LA = ["Barking and Dagenham","Barnet","Barnsley","Bath and North East Somerset","Bedford","Bexley","Birmingham","Blackburn with Darwen","Blackpool","Bolton","Bournemouth","Bracknell Forest","Bradford","Brent","Brighton and Hove","Bristol","Bromley","Buckinghamshire","Bury","Calderdale","Cambridgeshire","Camden","Central Bedfordshire","Cheshire East","Cheshire West and Chester","Cornwall","County Durham","Coventry","Croydon","Cumbria","Darlington","Derby","Derbyshire","Devon","Doncaster","Dorset","Dudley","Ealing","East Riding of Yorkshire","East Sussex","Enfield","Essex","Gateshead","Gloucestershire","Greenwich","Hackney","Halton","Hammersmith and Fulham","Hampshire","Haringey","Harrow","Hartlepool","Havering","Herefordshire","Hertfordshire","Hillingdon","Hounslow","Isle of Wight","Islington","Kensington and Chelsea","Kent","Kingston upon Hull","Kingston upon Thames","Kirklees","Knowsley","Lambeth","Lancashire","Leeds","Leicester","Leicestershire","Lewisham","Lincolnshire","Liverpool","Luton","Manchester","Medway","Merton","Middlesbrough","Milton Keynes","Newcastle upon Tyne","Newham","Norfolk","North East Lincolnshire","North Lincolnshire","North Somerset","North Tyneside","North Yorkshire","Northamptonshire","Northumberland","Nottingham","Nottinghamshire","Oldham","Oxfordshire","Peterborough","Plymouth","Poole","Portsmouth","Reading","Redbridge","Redcar and Cleveland","Richmond upon Thames","Rochdale","Rotherham","Rutland","Salford","Sandwell","Sefton","Sheffield","Shropshire","Slough","Solihull","Somerset","South Gloucestershire","South Tyneside","Southampton","Southend-on-Sea","Southwark","St Helens","Staffordshire","Stockport","Stockton-on-Tees","Stoke-on-Trent","Suffolk","Sunderland","Surrey","Sutton","Swindon","Tameside","Telford and Wrekin","Thurrock","Torbay","Tower Hamlets","Trafford","Wakefield","Walsall","Waltham Forest","Wandsworth","Warrington","Warwickshire","West Berkshire","West Sussex","Westminster","Wigan","Wiltshire","Windsor and Maidenhead","Wirral","Wokingham","Wolverhampton","Worcestershire","York"];
+        for(i=0; i<LA.length; i++) {
+            document.write('<option value="' + i +'">' + LA[i] + '</option>');
+        }
+    </script>
 </select> ?</h1>
 
 
-        <p>Population density: <a class="redText" id="redDensityNum"></a> <a class="blueText" id="blueDensityNum"></a> per square mile</p>
+        <p>Population density: <a class="redText" id="redDensityNum"></a> <a class="blueText" id="blueDensityNum"></a> per square kilometer</p>
         <div class="dial" style="background-image:url('dial_density.png')" >
             <div class="pointerRed" id="redDensity"></div>
             <div class="pointerBlue" id="blueDensity"></div>
@@ -53,6 +56,7 @@
 
         <h1> The bullying percentage is: <a class="redText" id="redResult"></a> <a class="blueText" id="blueResult"></a></h1>
 
+        <div class="selected" id="reset" onclick="reset()"><p>Reset<span class="hide"><a><i class="fa fa-refresh" aria-hidden="true"></i></a></span></p></div>
         <div class="selected" id="selectedRed" onclick="removeSelection(selected1)"><p>Leicester<span class="hide"><a>X</a></span></p></div>
         <div class="selected" id="selectedBlue" onclick="removeSelection(selected2)"><p>Buckinghamshire<span class="hide"><a>X</a></span></p></div>
 

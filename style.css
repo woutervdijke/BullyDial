@@ -4,7 +4,7 @@ body {
 
 /* divining divs */
 #container {
-    max-width: 800px;
+    max-width: 850px;
     min-width: 700px;
     min-height: 600px;
     margin: auto;
@@ -13,8 +13,8 @@ body {
 }
 #tool {
     background-color: #ffffff;
-    max-width: 700px;
-    min-height: 400px;
+    max-width: 800px;
+    min-height: 500px;
     margin: auto;
     padding: 0 20px 70px 20px;
     border: #7c7c7c solid 1px;
@@ -24,7 +24,7 @@ body {
     max-width: 650px;
     height: 40px;
     border-radius: 2px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: -10px;
     border: #7c7c7c solid 1px;
     background-color: #fff7f2;
@@ -126,14 +126,12 @@ body {
     transition: ease 500ms;
 }
 
-.hide a {
-    color: #7c7c7c;
-}
 
-.selected:hover .hide{
+
+/*.selected:hover .hide{
     width: 20px;
     transition: ease 250ms;
-}
+}*/
 
 .selected p {
     font-size: medium;
@@ -146,15 +144,28 @@ body {
 }
 
 
-
 #selectedBlue {
     border-bottom: solid 6px #0000ff;
     display: none;
 }
 
+#reset {
+    border-bottom: solid 6px #7c7c7c;
+    display: block;
+}
+
+#reset:hover .hide{
+    width: 20px;
+    transition: ease 250ms;
+}
+
 #getData {
     float: right;
-    padding-right: 50px;
+    padding-right: 10px;
+}
+
+#reset p{
+    font-weight: bold;
 }
 
 
