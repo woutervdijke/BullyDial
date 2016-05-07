@@ -9,7 +9,29 @@ body {
     min-height: 600px;
     margin: auto;
     margin-top: -8px;
-    padding: 20px 40px;
+    padding: 0px 0px;
+    background-color: #ffffff;
+}
+#byline {
+    text-align:right;
+    margin-right:10px;
+    font-size:1em;
+    margin-bottom: 15px;
+    display:block;
+    font-family: "Helvetica Neue", Verdana, sans-serif;
+}
+
+#intro {
+    max-width: 700px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 10px 20px 10px 20px;
+}
+
+#intro p {
+    text-align: justify;
+    max-width: 700px;
+    margin:auto;
 }
 #tool {
     background-color: #ffffff;
@@ -40,7 +62,7 @@ body {
     width: 1px;
     height: 36px;
     float: left;
-    background-color: #ff0000;
+    background-color: #ff7066;
     border: solid crimson 2px;
 }
 
@@ -152,6 +174,7 @@ body {
 #reset {
     border-bottom: solid 6px #7c7c7c;
     display: block;
+    cursor: pointer;
 }
 
 #reset:hover .hide{
@@ -166,6 +189,7 @@ body {
 
 #reset p{
     font-weight: bold;
+    cursor: inherit;
 }
 
 
@@ -177,7 +201,21 @@ h1 {
     margin-bottom: -10px;
 }
 
+h2 {
+    font-family: "Helvetica Neue", Verdana, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 p {
+    font-family: "Helvetica Neue", Verdana, sans-serif;
+    font-size: large;
+}
+
+ul {
+    max-width:700px;
+    margin-left: -20px;
+    list-style: none;
     font-family: "Helvetica Neue", Verdana, sans-serif;
     font-size: large;
 }
